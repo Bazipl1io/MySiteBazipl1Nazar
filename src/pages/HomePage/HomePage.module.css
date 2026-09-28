@@ -1,0 +1,163 @@
+.page {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  padding: 24px;
+  background-color: #202020;
+  /*
+  background-image:
+    linear-gradient(rgb(0 0 0 / 28%), rgb(0 0 0 / 28%)),
+    url('https://i.pinimg.com/736x/9e/ce/48/9ece488b492bb134285c85e1aa226414.jpg');
+  background-position: center;
+  background-size: cover;
+  */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.header h1 {
+  overflow-wrap: anywhere;
+}
+
+.city {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 5px;
+  color: #c2c2c2;
+  font-size: 14px;
+}
+
+.cityLink {
+  display: inline-block;
+  color: #fff;
+  text-decoration-color: #888;
+  text-underline-offset: 3px;
+  transition: color 150ms ease, transform 120ms ease;
+}
+
+.cityLink:hover,
+.cityLink:focus-visible {
+  color: #c5e879;
+}
+
+.cityLink:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.socialLink {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 8px 10px;
+  border: 1px solid #4a4a4a;
+  border-radius: 2px;
+  color: #eee;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 120ms ease;
+}
+
+.socialLink:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.socialLink:hover,
+.socialLink:focus-visible {
+  border-color: #777;
+  background: #414141;
+  transform: translateY(-1px);
+}
+
+.socialLink:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.copyList {
+  display: grid;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 40px;
+  padding: 9px 11px;
+  border: 1px solid #454545;
+  border-radius: 2px;
+  background: #383838;
+  color: #eee;
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 120ms ease;
+}
+
+.copyButton:hover,
+.copyButton:focus-visible {
+  border-color: #777;
+  background: #424242;
+}
+
+.copyButton:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.copyValue {
+  color: #aaa;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.menuLink {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 11px;
+  background: #252525;
+  color: #999;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease, transform 120ms ease;
+}
+
+.menuLink:hover,
+.menuLink:focus-visible {
+  background: #292929;
+  color: #ddd;
+  transform: translateY(-1px);
+}
+
+.menuLink:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+@media (max-width: 420px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .city {
+    justify-content: flex-start;
+  }
+}
